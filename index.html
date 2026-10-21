@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Utpol Das, MPH</title>
+<meta name="description" content="Utpol Das, MPH — Research Project Coordinator, Division of Palliative Medicine, University of Texas Medical Branch.">
+<meta property="og:title" content="Utpol Das, MPH">
+<meta property="og:description" content="Research Project Coordinator, Division of Palliative Medicine, UTMB. Palliative care, aging, pharmacoepidemiology, health equity.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://utpol-utmb.github.io/card/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --ground:#e9eef0; --card:#fbfcfc; --ink:#14232b; --muted:#56676f; --line:#c9d4d8;
+  --gulf:#0f6b74; --gulf-soft:#d5e9ea; --mark:#b4541f;
+  --display:"Newsreader", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --ground:#0c1418; --card:#15222a; --ink:#e6eef0; --muted:#9fb1b8; --line:#2b3d46;
+  --gulf:#5fc1c8; --gulf-soft:#16353b; --mark:#e08a57; color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{min-height:100%;margin:0}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-top:max(32px, env(safe-area-inset-top, 0px));padding-bottom:max(40px, env(safe-area-inset-bottom, 0px))}
+.wrap{max-width:760px;margin:0 auto;display:grid;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.stage{perspective:1600px}
+.card{display:grid;transition:transform .7s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.card.flipped{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);
+  border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 0 var(--line),0 18px 40px -24px rgba(10,30,40,.45);
+  padding:30px 32px;min-width:0;position:relative;overflow:hidden}
+.back{transform:rotateY(180deg)}
+@media (prefers-reduced-motion: reduce){
+  .card{transition:none}.card.flipped{transform:none}.back{transform:none}
+  .card .back{visibility:hidden}.card.flipped .front{visibility:hidden}.card.flipped .back{visibility:visible}}
+.front{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 28px;align-items:start}
+.name{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,46px);line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.name small{font-family:var(--body);font-weight:500;font-size:.38em;letter-spacing:.06em;color:var(--gulf);margin-left:.35em;vertical-align:.55em}
+.role{margin:10px 0 0;font-size:15px}.role b{font-weight:600}.role span{display:block;color:var(--muted)}
+.contacts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.contacts li{display:grid;grid-template-columns:70px minmax(0,1fr) auto;align-items:center;gap:10px}
+.k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.v{font-family:var(--mono);font-size:14px;overflow-wrap:anywhere}
+.v a{color:var(--ink);text-decoration-color:var(--gulf);text-underline-offset:3px}
+.copy{font:500 12px var(--body);color:var(--gulf);background:none;border:1px solid var(--line);border-radius:4px;padding:3px 9px;cursor:pointer}
+.copy:hover{border-color:var(--gulf)}
+:focus-visible{outline:2px solid var(--gulf);outline-offset:2px}
+.qrbox{display:grid;justify-items:center;gap:8px;padding-top:2px}
+#qr{background:#fff;padding:8px;border-radius:4px;line-height:0;border:1px solid var(--line)}
+#qr img,#qr canvas{width:132px;height:132px;image-rendering:pixelated}
+.qrcap{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;max-width:150px}
+.save{display:inline-block;font:600 13px var(--body);background:var(--gulf);color:var(--card);text-decoration:none;border-radius:4px;padding:8px 12px}
+.km{position:absolute;left:0;right:0;bottom:0;height:46px;pointer-events:none;opacity:.9}
+.front .spacer{height:34px;grid-column:1/-1}
+.abs-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:14px}
+.abs-head h2{font-family:var(--display);font-weight:600;font-size:22px;margin:0}
+.abs-head span{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.abs{display:grid;gap:10px;max-width:68ch}.abs p{margin:0;font-size:14.5px}
+.abs b{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gulf);margin-right:6px}
+.tl{margin-top:18px;overflow-x:auto}.tl svg{display:block;min-width:560px;width:100%;height:auto}
+.kw{margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.flip{font:600 14px var(--body);background:var(--gulf);color:var(--card);border:0;border-radius:4px;padding:10px 16px;cursor:pointer}
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.seg button{font:500 12.5px var(--body);background:var(--card);color:var(--muted);border:0;padding:8px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gulf-soft);color:var(--ink)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;border-top:1px solid var(--line);padding-top:12px}
+.note{font-size:13px;color:var(--muted);margin:0}
+@media (max-width:620px){.face{padding:24px 20px}.front{grid-template-columns:1fr}.qrbox{justify-items:start}.contacts li{grid-template-columns:62px minmax(0,1fr) auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow"><span>Utpol Das · digital card</span><span id="side-label">Side A · contact</span></div>
+  <div class="stage"><div class="card" id="card">
+    <section class="face front" aria-label="Contact details">
+      <div>
+        <h1 class="name">Utpol Das<small>MPH</small></h1>
+        <p class="role"><b>Research Project Coordinator</b>
+          <span>Division of Palliative Medicine, Department of Internal Medicine</span>
+          <span>University of Texas Medical Branch · Galveston, Texas</span></p>
+        <ul class="contacts">
+          <li><span class="k">Email</span><span class="v"><a id="em" href="mailto:utdas@utmb.edu">utdas@utmb.edu</a></span><button class="copy" type="button" data-copy="utdas@utmb.edu">Copy</button></li>
+          <li><span class="k">Mobile</span><span class="v"><a href="tel:+13477204656">+1 347 720 4656</a></span><button class="copy" type="button" data-copy="+13477204656">Copy</button></li>
+          <li><span class="k">ORCID</span><span class="v"><a href="https://orcid.org/0009-0001-7672-4473" target="_blank" rel="noopener">0009-0001-7672-4473</a></span><span></span></li>
+          <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/utpol-das-5b322548/" target="_blank" rel="noopener">in/utpol-das-5b322548</a></span><span></span></li>
+        </ul>
+      </div>
+      <div class="qrbox">
+        <div id="qr" role="img" aria-label="QR code"></div>
+        <div class="qrcap" id="qrcap">Scan with a phone camera to save my contact</div>
+        <a class="save" href="utpol-das.vcf" download="Utpol-Das.vcf">Save contact</a>
+      </div>
+      <div class="spacer"></div>
+      <svg class="km" viewBox="0 0 760 46" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 10 H120 V16 H230 V21 H330 V27 H430 V30 H540 V35 H640 V38 H760" fill="none" stroke="var(--gulf)" stroke-width="1.5"/>
+        <g fill="var(--gulf)"><rect x="80" y="7" width="1.5" height="6"/><rect x="180" y="13" width="1.5" height="6"/><rect x="300" y="18" width="1.5" height="6"/><rect x="390" y="24" width="1.5" height="6"/><rect x="500" y="27" width="1.5" height="6"/><rect x="600" y="32" width="1.5" height="6"/><rect x="700" y="35" width="1.5" height="6"/></g>
+        <text x="752" y="30" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)">S(t)</text>
+      </svg>
+    </section>
+    <section class="face back" aria-label="Structured abstract">
+      <div class="abs-head"><h2>Structured abstract</h2><span>Das U. Galveston, TX. 2026.</span></div>
+      <div class="abs">
+        <p><b>Background</b>About ten years in public health research and programs, from maternal and child health and WASH in Bangladesh, including the BRAC response for Rohingya refugees in Cox's Bazar, to clinical research in the United States.</p>
+        <p><b>Methods</b>Epidemiology and pharmacoepidemiology with large secondary data (Medicare claims, HRS, H-EPESE, Epic Cosmos), clinical trial coordination and IRB work, and qualitative analysis.</p>
+        <p><b>Results</b>Research Project Coordinator in Palliative Medicine at UTMB; GBD collaborator with IHME; MPH in Epidemiology, UTMB (2026).</p>
+        <p><b>Conclusions</b>Interested in palliative and hospice care, aging, pain and health equity. Open to collaboration.</p>
+      </div>
+      <div class="tl"><svg viewBox="0 0 640 86" role="img" aria-label="Career timeline 2014 to 2026">
+        <line x1="20" y1="40" x2="620" y2="40" stroke="var(--line)" stroke-width="2"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)" text-anchor="middle"><text x="20" y="72">2014</text><text x="120" y="72">2016</text><text x="220" y="72">2018</text><text x="320" y="72">2020</text><text x="420" y="72">2022</text><text x="520" y="72">2024</text><text x="620" y="72">2026</text></g>
+        <g font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="var(--ink)">
+          <circle cx="20" cy="40" r="4.5" fill="var(--gulf)"/><text x="20" y="24" text-anchor="start">MS Biotech</text>
+          <circle cx="70" cy="40" r="4.5" fill="var(--gulf)"/><text x="70" y="58" text-anchor="middle">MPH, BRAC</text>
+          <circle cx="120" cy="40" r="4.5" fill="var(--gulf)"/><text x="120" y="24" text-anchor="middle">EngenderHealth</text>
+          <circle cx="270" cy="40" r="4.5" fill="var(--gulf)"/><text x="270" y="24" text-anchor="middle">VSO · USAID MaMoni</text>
+          <circle cx="345" cy="40" r="4.5" fill="var(--gulf)"/><text x="345" y="58" text-anchor="middle">BRAC WASH, Cox's Bazar</text>
+          <circle cx="490" cy="40" r="4.5" fill="var(--gulf)"/><text x="490" y="24" text-anchor="middle">UTMB MPH Epi</text>
+          <circle cx="570" cy="40" r="5.5" fill="var(--mark)"/><text x="620" y="58" text-anchor="end">Palliative Medicine, UTMB</text>
+        </g></svg></div>
+      <div class="kw">Keywords: palliative care · geriatric epidemiology · pharmacoepidemiology · health disparities · real-world data</div>
+    </section>
+  </div></div>
+  <div class="bar">
+    <button class="flip" id="flip" type="button" aria-pressed="false">Flip to the abstract</button>
+    <div class="seg" role="group" aria-label="What the QR code opens">
+      <button type="button" data-q="contact" aria-pressed="true">Save contact</button>
+      <button type="button" data-q="card" aria-pressed="false">This card</button>
+      <button type="button" data-q="linkedin" aria-pressed="false">LinkedIn</button>
+      <button type="button" data-q="gsa" aria-pressed="false">GSA 2026 poster</button>
+    </div>
+  </div>
+  <div class="share"><span class="k">Card link</span><span class="v" id="cardlink">utpol-utmb.github.io/card</span><button class="copy" type="button" data-copy="https://utpol-utmb.github.io/card/">Copy link</button></div>
+  <p class="note">GSA 2026 poster (PDF): <a href="gsa2026-poster.pdf" target="_blank" rel="noopener">view the poster</a></p>
+</div>
+<script>
+(function(){
+  var SITE="https://utpol-utmb.github.io/card/";
+  var VCARD=["BEGIN:VCARD","VERSION:3.0","N:Das;Utpol;;;","FN:Utpol Das, MPH","ORG:University of Texas Medical Branch;Division of Palliative Medicine","TITLE:Research Project Coordinator","TEL;TYPE=CELL:+13477204656","EMAIL;TYPE=WORK:utdas@utmb.edu","URL:"+SITE,"END:VCARD"].join("\n");
+  var MODES={contact:[VCARD,"Scan with a phone camera to save my contact"],card:[SITE,"Scan to open this digital card"],linkedin:["https://www.linkedin.com/in/utpol-das-5b322548/","Scan to open my LinkedIn"],gsa:[SITE+"gsa2026-poster.pdf","Scan to open my GSA 2026 poster (PDF)"]};
+  var box=document.getElementById("qr"),cap=document.getElementById("qrcap");
+  function draw(k){box.innerHTML="";if(window.QRCode){new QRCode(box,{text:MODES[k][0],width:264,height:264,colorDark:"#14232b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});}else{box.textContent="QR unavailable";}cap.textContent=MODES[k][1];}
+  var qb=document.querySelectorAll("[data-q]");
+  function pick(k){qb.forEach(function(x){x.setAttribute("aria-pressed",x.dataset.q===k?"true":"false");});draw(k);}
+  qb.forEach(function(b){b.addEventListener("click",function(){pick(b.dataset.q);});});
+  pick(location.hash==="#gsa"?"gsa":"contact");
+  var card=document.getElementById("card"),fb=document.getElementById("flip"),sl=document.getElementById("side-label");
+  function side(b){card.classList.toggle("flipped",b);fb.setAttribute("aria-pressed",b?"true":"false");fb.textContent=b?"Flip to contact details":"Flip to the abstract";sl.textContent=b?"Side B · abstract":"Side A · contact";}
+  fb.addEventListener("click",function(){side(!card.classList.contains("flipped"));});
+  if(location.hash==="#abstract")side(true);
+  document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){var t=b.dataset.copy,o=b.textContent;
+    function done(){b.textContent="Copied";setTimeout(function(){b.textContent=o},1600);}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){window.prompt("Copy:",t);});}else{window.prompt("Copy:",t);}});});
+})();
+</script>
+</body>
+</html>
